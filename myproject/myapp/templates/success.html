@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .success-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .success-icon {
+            font-size: 80px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .success-container h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .success-container p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .btn-group-custom {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .btn-custom {
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary-custom:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .btn-secondary-custom {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        .btn-secondary-custom:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✓</div>
+        <h1>Registration Successful!</h1>
+        <p>Your student registration has been completed successfully. You can now register another student or view all registered students.</p>
+        
+        <div class="btn-group-custom">
+            <a href="{% url 'register' %}" class="btn-custom btn-primary-custom">Register Another</a>
+            <a href="{% url 'student_list' %}" class="btn-custom btn-secondary-custom">View All Students</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
